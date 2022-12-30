@@ -7,9 +7,14 @@ import { AllExceptionsFilter } from './common/interceptors/exceptions/base.excep
 import { HttpExceptionFilter } from './common/interceptors/exceptions/http.exception.filter';
 import { TransformInterceptor } from './common/interceptors/transform.interceptor';
 
-async function bootstrap() {
-  const app = await NestFactory.create(AppModule, new FastifyAdapter());
+declare const module: any;
 
+async function bootstrap() {
+  if (module.hot) {
+    module.hot.accept();
+    module.hot.dispose(() => app.close());
+  }
+  const app = await NestFactory.create(AppModule, new FastifyAdapter());
   // 接口版本化管理
   app.enableVersioning({
     type: VersioningType.URI,
