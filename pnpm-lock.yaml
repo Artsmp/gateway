@@ -18,6 +18,7 @@ specifiers:
   eslint: ^8.0.1
   eslint-config-prettier: ^8.3.0
   eslint-plugin-prettier: ^4.0.0
+  fastify: ^4.10.2
   jest: 29.3.1
   prettier: ^2.3.2
   reflect-metadata: ^0.1.13
@@ -35,7 +36,8 @@ dependencies:
   '@nestjs/core': registry.npmmirror.com/@nestjs/core/9.2.1_e6la6qvsclaae2becwjnmfvsuq
   '@nestjs/mapped-types': registry.npmmirror.com/@nestjs/mapped-types/1.2.0_n3ccvzwmui2f6jwh4xeqysew6i
   '@nestjs/platform-express': registry.npmmirror.com/@nestjs/platform-express/9.2.1_hjcqpoaebdr7gdo5hgc22hthbe
-  '@nestjs/platform-fastify': registry.npmmirror.com/@nestjs/platform-fastify/9.2.1
+  '@nestjs/platform-fastify': registry.npmmirror.com/@nestjs/platform-fastify/9.2.1_hjcqpoaebdr7gdo5hgc22hthbe
+  fastify: registry.npmmirror.com/fastify/4.10.2
   reflect-metadata: registry.npmmirror.com/reflect-metadata/0.1.13
   rxjs: registry.npmmirror.com/rxjs/7.8.0
 
@@ -1169,14 +1171,27 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  registry.npmmirror.com/@nestjs/platform-fastify/9.2.1:
+  registry.npmmirror.com/@nestjs/platform-fastify/9.2.1_hjcqpoaebdr7gdo5hgc22hthbe:
     resolution: {integrity: sha512-vhygCrU1Q4VkgsSo9EbS5Ihn2J78ZAK+Zb4M5Bbg+DGWGyrOLbMWL/gYgGSGIV4Fe7CVzp7H9xwuCfl8oqEFNg==, registry: https://packages.aliyun.com/5eb3e37038076f00011bcd4a/npm/npm-registry/, tarball: https://registry.npmmirror.com/@nestjs/platform-fastify/-/platform-fastify-9.2.1.tgz}
+    id: registry.npmmirror.com/@nestjs/platform-fastify/9.2.1
     name: '@nestjs/platform-fastify'
     version: 9.2.1
+    peerDependencies:
+      '@fastify/static': ^6.0.0
+      '@fastify/view': ^7.0.0
+      '@nestjs/common': ^9.0.0
+      '@nestjs/core': ^9.0.0
+    peerDependenciesMeta:
+      '@fastify/static':
+        optional: true
+      '@fastify/view':
+        optional: true
     dependencies:
       '@fastify/cors': registry.npmmirror.com/@fastify/cors/8.2.0
       '@fastify/formbody': registry.npmmirror.com/@fastify/formbody/7.3.0
       '@fastify/middie': registry.npmmirror.com/@fastify/middie/8.0.0
+      '@nestjs/common': registry.npmmirror.com/@nestjs/common/9.2.1_mnr6j2del53muneqly5h4y27ai
+      '@nestjs/core': registry.npmmirror.com/@nestjs/core/9.2.1_e6la6qvsclaae2becwjnmfvsuq
       fastify: registry.npmmirror.com/fastify/4.10.2
       light-my-request: registry.npmmirror.com/light-my-request/5.6.1
       path-to-regexp: registry.npmmirror.com/path-to-regexp/3.2.0
